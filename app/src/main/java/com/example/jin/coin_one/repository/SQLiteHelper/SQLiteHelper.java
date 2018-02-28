@@ -15,18 +15,15 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE local_list(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, price INTEGER, theme TEXT, location TEXT, memo TEXT, photo TEXT, latitude REAL, longitude REAL)"; // 로컬에서 저장하는 맛집 리스트 table
+        String sql = "CREATE TABLE ignore_list(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)"; // 로컬에서 저장하는 맛집 리스트 table
         db.execSQL(sql);
-        String sql2 = "CREATE TABLE local_course(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, photo TEXT, memo TEXT,tag TEXT)";
-        db.execSQL(sql2);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String sql = "DROP TABLE local_list";
+        String sql = "DROP TABLE ignore_list";
         db.execSQL(sql);
-        String sql2 = "DROP TABLE local_course";
-        db.execSQL(sql2);
         onCreate(db);
 
     }

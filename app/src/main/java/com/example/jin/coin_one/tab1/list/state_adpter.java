@@ -1,6 +1,7 @@
 package com.example.jin.coin_one.tab1.list;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
@@ -95,6 +96,20 @@ public class state_adpter extends BaseAdapter {
         holder.price_holder= (TextView) convertView.findViewById(R.id.price);
         holder.diffrence_icon_holder=(ImageView) convertView.findViewById(R.id.difference_img);
         holder.difference_holder=(ImageView) convertView.findViewById(R.id.alert_img);
+
+
+        holder.price_holder.setText(item.getPrice().toString());
+        if(item.difference>0){
+            holder.holding_holder.setTextColor(Color.GREEN);
+        }else if(item.difference<0) {
+            holder.holding_holder.setTextColor(Color.RED);
+            holder.diffrence_icon_holder.setImageResource(R.drawable.minus);
+
+        }else
+        {
+
+        }
+
 
         System.out.println("item부분" +item.getName());
 
