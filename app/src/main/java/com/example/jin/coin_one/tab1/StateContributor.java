@@ -1,5 +1,10 @@
 package com.example.jin.coin_one.tab1;
 
+import com.example.jin.coin_one.tab1.list.Items;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
 /**
  * Created by jin on 2018-02-27.
  */
@@ -21,7 +26,7 @@ public class StateContributor {
 
     @Override
     public String toString() {
-        return currency+ " has a last"+last;
+        return "레트로핏 테스트"+currency;
     }
 
 

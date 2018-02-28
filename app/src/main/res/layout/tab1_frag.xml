@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -24,24 +25,24 @@
         <TextView
             android:id="@+id/tv2"
             android:layout_width="wrap_content"
-            android:gravity="center_vertical|center_horizontal"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textColor="@android:color/background_light"
             android:ems="10"
+            android:gravity="center_vertical|center_horizontal"
             android:inputType="textPersonName"
-            android:text="보유량" />
+            android:text="가격"
+            android:textColor="@android:color/background_light" />
 
         <TextView
             android:id="@+id/tv3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical|center_horizontal"
             android:layout_weight="1"
             android:ems="10"
-            android:textColor="@android:color/background_light"
+            android:gravity="center_vertical|center_horizontal"
             android:inputType="textPersonName"
-            android:text="가격" />
+            android:text="전일대비"
+            android:textColor="@android:color/background_light" />
 
         <TextView
             android:id="@+id/tv4"
@@ -54,4 +55,13 @@
             android:inputType="textPersonName"
             android:text="알람" />
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+
+
+    <ListView
+        android:id="@+id/listView"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+</LinearLayout>

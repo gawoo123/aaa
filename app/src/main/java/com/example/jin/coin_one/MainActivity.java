@@ -19,6 +19,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import com.example.jin.coin_one.tab1.Tab1Fragment;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -137,9 +139,27 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            Fragment fragment = null;
+            Bundle args = null;
+            switch (position) {
+                case 0:
+                    fragment = new Tab1Fragment();
+                    args = new Bundle();
+                    break;
+                case 1:
+                    fragment = new Tab1Fragment();
+                    args = new Bundle();
+                    break;
+                case 2:
+                    fragment = new Tab1Fragment();
+                    args = new Bundle();
+                    break;
+                case 3:
+                    fragment = new Tab1Fragment();
+                    args = new Bundle();
+                    break;
+            }
+            return fragment;
         }
 
         @Override
