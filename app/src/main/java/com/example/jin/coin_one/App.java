@@ -3,19 +3,10 @@ package com.example.jin.coin_one;
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
-import android.graphics.drawable.Drawable;
 import android.util.Log;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.jin.coin_one.repository.SQLiteHelper.SQLiteHelper;
-import com.example.jin.coin_one.repository.retrofit.GithubService;
-
-import org.w3c.dom.Text;
-
-import retrofit2.Retrofit;
-
-import static com.example.jin.coin_one.repository.retrofit.GithubService.retroInterface;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 /**
  * Created by jin on 2018-02-27.
@@ -35,7 +26,7 @@ public class App extends Application{
         super.onCreate();
 
         //SQLite
-        sqliteHelper = new SQLiteHelper(this,dbName,null,dbVersion);
+        sqliteHelper = new SQLiteHelper(this, dbName, null, dbVersion);
 
         try {
 //         // 데이터베이스 객체를 얻어오는 다른 간단한 방법
@@ -54,11 +45,11 @@ public class App extends Application{
 //            finish(); // 액티비티 종료
         }
 
+        String token = FirebaseInstanceId.getInstance().getToken();
+
+
+        /////////////////////////////////////
+
 
     }
-
-
-
-
-
 }

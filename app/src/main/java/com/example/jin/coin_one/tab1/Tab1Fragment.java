@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.jin.coin_one.R;
@@ -86,7 +87,17 @@ public class Tab1Fragment extends Fragment {
 
             });
         });
-
+//
+//        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//                state_item item = (state_item) parent.getItemAtPosition(position);
+//
+//                System.out.println("가랏"+item.getName());
+//            }
+//        });
+//
 
 
 
